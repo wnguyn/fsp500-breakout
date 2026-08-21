@@ -1,0 +1,488 @@
+EESchema Schematic File Version 4
+LIBS:power
+LIBS:device
+LIBS:Regulator_Switching
+LIBS:Connector_Generic
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+Sheet 1 1
+Title "12V to SATA Power Buck Converters"
+Comment1 "Dual LM2596 regulators: +5V and +3V3; +12V passed through"
+Comment2 "Verify component ratings and add input protection before production"
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 666A59D3
+P 1500 6400
+F 0 "J2" H 1650 6500 50  0000 C CNN
+F 1 "12V_INPUT" H 1700 6300 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1500 6400 50  0001 C CNN
+	1    1500 6400
+	1 0 0 -1
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x15 J1
+U 1 1 8AD17AD0
+P 9000 3400
+F 0 "J1" H 9150 3500 50  0000 C CNN
+F 1 "SATA_POWER" H 9200 3300 50  0000 C CNN
+F 2 "breakout:SATA_Power_15P_Horizontal" H 9000 3400 50  0001 C CNN
+	1    9000 3400
+	1 0 0 -1
+$EndComp
+$Comp
+L Regulator_Switching:LM2596S-ADJ U1
+U 1 1 D7AAC1FB
+P 3400 3000
+F 0 "U1" H 3550 3100 50  0000 C CNN
+F 1 "LM2596S-ADJ 5V" H 3600 2900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 3400 3000 50  0001 C CNN
+	1    3400 3000
+	1 0 0 -1
+$EndComp
+$Comp
+L Regulator_Switching:LM2596S-ADJ U2
+U 1 1 36D054B6
+P 3400 5600
+F 0 "U2" H 3550 5700 50  0000 C CNN
+F 1 "LM2596S-ADJ 3V3" H 3600 5500 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 3400 5600 50  0001 C CNN
+	1    3400 5600
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 3AC634D6
+P 4200 3100
+F 0 "D1" H 4350 3200 50  0000 C CNN
+F 1 "1N5822" H 4400 3000 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 4200 3100 50  0001 C CNN
+	1    4200 3100
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 DCD82210
+P 5100 3100
+F 0 "L1" H 5250 3200 50  0000 C CNN
+F 1 "68uH" H 5300 3000 50  0000 C CNN
+F 2 "Inductor_SMD:L_10x10mm_H10" H 5100 3100 50  0001 C CNN
+	1    5100 3100
+	0 1 1 0
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 7C1E9993
+P 4500 3900
+F 0 "C1" H 4650 4000 50  0000 C CNN
+F 1 "100uF" H 4700 3800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 4500 3900 50  0001 C CNN
+	1    4500 3900
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 8C78A830
+P 5700 3900
+F 0 "C3" H 5850 4000 50  0000 C CNN
+F 1 "330uF" H 5900 3800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_7343-31" H 5700 3900 50  0001 C CNN
+	1    5700 3900
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 34CE0BFF
+P 6500 3500
+F 0 "R1" H 6650 3600 50  0000 C CNN
+F 1 "3.09k" H 6700 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6500 3500 50  0001 C CNN
+	1    6500 3500
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 0D2DA3C4
+P 6500 4100
+F 0 "R2" H 6650 4200 50  0000 C CNN
+F 1 "1.00k" H 6700 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6500 4100 50  0001 C CNN
+	1    6500 4100
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:D_Schottky D2
+U 1 1 8BE61356
+P 4200 5700
+F 0 "D2" H 4350 5800 50  0000 C CNN
+F 1 "1N5822" H 4400 5600 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 4200 5700 50  0001 C CNN
+	1    4200 5700
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:L L2
+U 1 1 75D0BD24
+P 5100 5700
+F 0 "L2" H 5250 5800 50  0000 C CNN
+F 1 "47uH" H 5300 5600 50  0000 C CNN
+F 2 "Inductor_SMD:L_10x10mm_H10" H 5100 5700 50  0001 C CNN
+	1    5100 5700
+	0 1 1 0
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 33C1EAB2
+P 4500 6500
+F 0 "C2" H 4650 6600 50  0000 C CNN
+F 1 "100uF" H 4700 6400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 4500 6500 50  0001 C CNN
+	1    4500 6500
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 643D6E0B
+P 5700 6500
+F 0 "C4" H 5850 6600 50  0000 C CNN
+F 1 "330uF" H 5900 6400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_7343-31" H 5700 6500 50  0001 C CNN
+	1    5700 6500
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 F2D02AC4
+P 6500 6100
+F 0 "R3" H 6650 6200 50  0000 C CNN
+F 1 "1.68k" H 6700 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6500 6100 50  0001 C CNN
+	1    6500 6100
+	1 0 0 -1
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 4C691D45
+P 6500 6700
+F 0 "R4" H 6650 6800 50  0000 C CNN
+F 1 "1.00k" H 6700 6600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6500 6700 50  0001 C CNN
+	1    6500 6700
+	1 0 0 -1
+$EndComp
+Text Label 8200 2700 2    50   ~ 0
++3V3
+Text Label 8200 2800 2    50   ~ 0
++3V3
+Text Label 8200 2900 2    50   ~ 0
++3V3
+Text Label 8200 3000 2    50   ~ 0
+GND
+Text Label 8200 3100 2    50   ~ 0
+GND
+Text Label 8200 3200 2    50   ~ 0
+GND
+Text Label 8200 3300 2    50   ~ 0
++5V
+Text Label 8200 3400 2    50   ~ 0
++5V
+Text Label 8200 3500 2    50   ~ 0
++5V
+Text Label 8200 3600 2    50   ~ 0
+GND
+Text Label 8200 3700 2    50   ~ 0
+GND
+Text Label 8200 3800 2    50   ~ 0
+GND
+Text Label 8200 3900 2    50   ~ 0
++12V
+Text Label 8200 4000 2    50   ~ 0
++12V
+Text Label 8200 4100 2    50   ~ 0
++12V
+Text Label 2700 2900 2    50   ~ 0
++12V
+Text Label 2700 5500 2    50   ~ 0
++12V
+Text Label 6200 3100 0    50   ~ 0
++5V
+Text Label 6200 5700 0    50   ~ 0
++3V3
+$Comp
+L power:+12V PWR01
+U 1 1 53D23F87
+P 2700 2800
+F 0 "PWR01" H 2850 2900 50  0000 C CNN
+F 1 "+12V" H 2900 2700 50  0000 C CNN
+	1    2700 2800
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR02
+U 1 1 91B3C684
+P 3400 3500
+F 0 "PWR02" H 3550 3600 50  0000 C CNN
+F 1 "GND" H 3600 3400 50  0000 C CNN
+	1    3400 3500
+	1 0 0 -1
+$EndComp
+$Comp
+L power:+5V PWR03
+U 1 1 603640B3
+P 6200 3100
+F 0 "PWR03" H 6350 3200 50  0000 C CNN
+F 1 "+5V" H 6400 3000 50  0000 C CNN
+	1    6200 3100
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR04
+U 1 1 1A47A07F
+P 4350 3500
+F 0 "PWR04" H 4500 3600 50  0000 C CNN
+F 1 "GND" H 4550 3400 50  0000 C CNN
+	1    4350 3500
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR05
+U 1 1 795B13D3
+P 4500 4100
+F 0 "PWR05" H 4650 4200 50  0000 C CNN
+F 1 "GND" H 4700 4000 50  0000 C CNN
+	1    4500 4100
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR06
+U 1 1 947097AD
+P 5700 4100
+F 0 "PWR06" H 5850 4200 50  0000 C CNN
+F 1 "GND" H 5900 4000 50  0000 C CNN
+	1    5700 4100
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR07
+U 1 1 582605FD
+P 6500 4300
+F 0 "PWR07" H 6650 4400 50  0000 C CNN
+F 1 "GND" H 6700 4200 50  0000 C CNN
+	1    6500 4300
+	1 0 0 -1
+$EndComp
+$Comp
+L power:+12V PWR08
+U 1 1 778B01B5
+P 2700 5400
+F 0 "PWR08" H 2850 5500 50  0000 C CNN
+F 1 "+12V" H 2900 5300 50  0000 C CNN
+	1    2700 5400
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR09
+U 1 1 EAA69A3A
+P 3400 6100
+F 0 "PWR09" H 3550 6200 50  0000 C CNN
+F 1 "GND" H 3600 6000 50  0000 C CNN
+	1    3400 6100
+	1 0 0 -1
+$EndComp
+$Comp
+L power:+3V3 PWR10
+U 1 1 6DCA8A35
+P 6200 5700
+F 0 "PWR10" H 6350 5800 50  0000 C CNN
+F 1 "+3V3" H 6400 5600 50  0000 C CNN
+	1    6200 5700
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR11
+U 1 1 4DA2436C
+P 4350 6100
+F 0 "PWR11" H 4500 6200 50  0000 C CNN
+F 1 "GND" H 4550 6000 50  0000 C CNN
+	1    4350 6100
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR12
+U 1 1 DE611CDC
+P 4500 6700
+F 0 "PWR12" H 4650 6800 50  0000 C CNN
+F 1 "GND" H 4700 6600 50  0000 C CNN
+	1    4500 6700
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR13
+U 1 1 B774FAA2
+P 5700 6700
+F 0 "PWR13" H 5850 6800 50  0000 C CNN
+F 1 "GND" H 5900 6600 50  0000 C CNN
+	1    5700 6700
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR14
+U 1 1 F3AC251B
+P 6500 6900
+F 0 "PWR14" H 6650 7000 50  0000 C CNN
+F 1 "GND" H 6700 6800 50  0000 C CNN
+	1    6500 6900
+	1 0 0 -1
+$EndComp
+$Comp
+L power:+12V PWR15
+U 1 1 F77968D2
+P 900 6400
+F 0 "PWR15" H 1050 6500 50  0000 C CNN
+F 1 "+12V" H 1100 6300 50  0000 C CNN
+	1    900 6400
+	1 0 0 -1
+$EndComp
+$Comp
+L power:GND PWR16
+U 1 1 FC2D10DD
+P 900 6500
+F 0 "PWR16" H 1050 6600 50  0000 C CNN
+F 1 "GND" H 1100 6400 50  0000 C CNN
+	1    900 6500
+	1 0 0 -1
+$EndComp
+Wire Wire Line
+	2700 2900 2900 2900
+Wire Wire Line
+	2900 2900 2900 3100
+Wire Wire Line
+	2900 3100 2900 3100
+Wire Wire Line
+	3900 3100 4050 3100
+Wire Wire Line
+	4350 3100 4950 3100
+Wire Wire Line
+	5250 3100 6200 3100
+Wire Wire Line
+	3400 3300 3400 3500
+Wire Wire Line
+	4050 3100 4050 3500
+Wire Wire Line
+	4350 3100 4350 3500
+Wire Wire Line
+	4350 3500 4350 3500
+Wire Wire Line
+	5250 3100 5700 3900
+Wire Wire Line
+	5700 3900 5700 3900
+Wire Wire Line
+	3900 2900 3800 2900
+Wire Wire Line
+	3800 2900 3800 3650
+Wire Wire Line
+	3800 3650 6500 3650
+Wire Wire Line
+	2700 5500 2900 5500
+Wire Wire Line
+	2900 5500 2900 5700
+Wire Wire Line
+	2900 5700 2900 5700
+Wire Wire Line
+	3900 5700 4050 5700
+Wire Wire Line
+	4350 5700 4950 5700
+Wire Wire Line
+	5250 5700 6200 5700
+Wire Wire Line
+	3400 3300 3400 3500
+Wire Wire Line
+	4050 5700 4050 6100
+Wire Wire Line
+	4350 5700 4350 6100
+Wire Wire Line
+	4350 6100 4350 6100
+Wire Wire Line
+	5250 5700 5700 6500
+Wire Wire Line
+	5700 6500 5700 6500
+Wire Wire Line
+	3900 5500 3800 5500
+Wire Wire Line
+	3800 5500 3800 6250
+Wire Wire Line
+	3800 6250 6500 6250
+Wire Wire Line
+	4350 3100 4350 3500
+Wire Wire Line
+	4500 3750 4500 3100
+Wire Wire Line
+	4500 4050 4500 4100
+Wire Wire Line
+	5700 3750 5700 3100
+Wire Wire Line
+	5700 4050 5700 4100
+Wire Wire Line
+	6500 3650 6500 3950
+Wire Wire Line
+	6500 4250 6500 4300
+Wire Wire Line
+	4350 5700 4350 6100
+Wire Wire Line
+	4500 6350 4500 5700
+Wire Wire Line
+	4500 6650 4500 6700
+Wire Wire Line
+	5700 6350 5700 5700
+Wire Wire Line
+	5700 6650 5700 6700
+Wire Wire Line
+	6500 6250 6500 6550
+Wire Wire Line
+	6500 6850 6500 6900
+Wire Wire Line
+	1300 6400 900 6400
+Wire Wire Line
+	1300 6500 900 6500
+Wire Wire Line
+	8800 2700 8200 2700
+Wire Wire Line
+	8800 2800 8200 2800
+Wire Wire Line
+	8800 2900 8200 2900
+Wire Wire Line
+	8800 3000 8200 3000
+Wire Wire Line
+	8800 3100 8200 3100
+Wire Wire Line
+	8800 3200 8200 3200
+Wire Wire Line
+	8800 3300 8200 3300
+Wire Wire Line
+	8800 3400 8200 3400
+Wire Wire Line
+	8800 3500 8200 3500
+Wire Wire Line
+	8800 3600 8200 3600
+Wire Wire Line
+	8800 3700 8200 3700
+Wire Wire Line
+	8800 3800 8200 3800
+Wire Wire Line
+	8800 3900 8200 3900
+Wire Wire Line
+	8800 4000 8200 4000
+Wire Wire Line
+	8800 4100 8200 4100
+Text Notes 900 1000 0    80   ~ 16
+SATA power from 12 V input: pass 12 V directly; generate regulated 5 V and 3.3 V rails.
+Text Notes 900 1250 0    80   ~ 16
+U1: LM2596S-ADJ, nominal 5 V / 3 A. R1=3.09k, R2=1.00k (Vref ~1.23 V).
+Text Notes 900 1500 0    80   ~ 16
+U2: LM2596S-ADJ, nominal 3.3 V / 3 A. R3=1.68k, R4=1.00k (Vref ~1.23 V).
+Text Notes 900 1750 0    80   ~ 16
+D1/D2 are catch diodes; verify inductor, capacitor ripple-current, thermal, and load ratings against the drive.
+Text Notes 900 2000 0    80   ~ 16
+Input protection, fuse/current limiting, reverse-polarity protection, and USB-PD source negotiation are external to this sheet.
+$EndSCHEMATC
