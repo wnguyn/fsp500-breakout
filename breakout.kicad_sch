@@ -2258,6 +2258,194 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Switch:SW_DPST_x2"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_DPST_x2"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Single Pole Single Throw (SPST) switch, separate symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch lever"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_DPST_x2_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.254) (xy 1.524 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_DPST_x2_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "SW_DPST_x2_2_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+12V"
 			(power global)
 			(pin_numbers
@@ -2990,6 +3178,12 @@
 		(uuid "87d1baa8-7670-431f-b66c-21907b41321e")
 	)
 	(junction
+		(at 165.1 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94d2ca81-1d99-4ac2-b48d-12d2c2550b09")
+	)
+	(junction
 		(at 39.37 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3000,12 +3194,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9fa372cb-b44d-4346-a8fc-fd20ef0ed5a8")
-	)
-	(junction
-		(at 165.1 134.62)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a5bdd9cd-7b3c-4350-af0c-15cde7ecb8b2")
 	)
 	(junction
 		(at 165.1 105.41)
@@ -3282,6 +3470,16 @@
 			(type default)
 		)
 		(uuid "203b51fb-1cfc-4c21-8545-135379b67bc6")
+	)
+	(wire
+		(pts
+			(xy 35.56 137.16) (xy 40.64 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20651046-ce7b-409d-9da4-ecbbe15a11ef")
 	)
 	(wire
 		(pts
@@ -4225,6 +4423,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 137.16) (xy 54.61 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0c39374-aa37-427c-a7c6-d9ca4eaee200")
+	)
+	(wire
+		(pts
 			(xy 223.52 38.1) (xy 226.06 38.1)
 		)
 		(stroke
@@ -4533,6 +4741,16 @@
 		)
 		(uuid "03d04847-3767-44f4-a56f-198982cee890")
 	)
+	(label "GND_ON"
+		(at 54.61 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "076f8535-b5ad-481d-912c-56fb9cfe8b66")
+	)
 	(label "12V_SATA3"
 		(at 177.8 132.08 0)
 		(effects
@@ -4584,7 +4802,7 @@
 		(uuid "2a2280af-13d4-43c5-b57a-1db2a93a0ed6")
 	)
 	(label "GND"
-		(at 58.42 149.86 0)
+		(at 50.8 154.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4614,7 +4832,7 @@
 		(uuid "376ee36f-08e9-4c6e-ae92-e91df035f456")
 	)
 	(label "5VSB"
-		(at 58.42 147.32 0)
+		(at 50.8 152.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4664,7 +4882,7 @@
 		(uuid "55ba5417-52ea-4d93-af36-325cdc821d86")
 	)
 	(label "PWOn"
-		(at 45.72 147.32 180)
+		(at 38.1 152.4 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4674,7 +4892,7 @@
 		(uuid "5779fb15-8212-4d01-91b7-bc5f9a94605e")
 	)
 	(label "GND"
-		(at 45.72 149.86 180)
+		(at 38.1 154.94 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4683,8 +4901,8 @@
 		)
 		(uuid "64445a5f-10e3-451d-980e-f3aea227048c")
 	)
-	(label "GND"
-		(at 45.72 144.78 180)
+	(label "GND_ON"
+		(at 38.1 149.86 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4744,7 +4962,7 @@
 		(uuid "82406276-4d0b-45a3-8e76-2f73c70e01d8")
 	)
 	(label "+12V"
-		(at 58.42 142.24 0)
+		(at 50.8 147.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4754,7 +4972,7 @@
 		(uuid "828e62b2-1634-4bb7-917f-3deca3cb9c79")
 	)
 	(label "3V3"
-		(at 45.72 152.4 180)
+		(at 38.1 157.48 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4794,7 +5012,7 @@
 		(uuid "a389f9ef-d165-4341-85be-277b6c00d309")
 	)
 	(label "+12V"
-		(at 58.42 144.78 0)
+		(at 50.8 149.86 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4812,6 +5030,16 @@
 			(justify left bottom)
 		)
 		(uuid "aa056e19-6799-48aa-a920-cb2624d6ed12")
+	)
+	(label "PWOn"
+		(at 35.56 137.16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c1437452-334f-4b64-b9c1-1d1c844cb381")
 	)
 	(label "5V_SATA4"
 		(at 177.8 107.95 0)
@@ -4844,7 +5072,7 @@
 		(uuid "c68eba27-b5a1-49c1-be28-f185549671a4")
 	)
 	(label "GND"
-		(at 45.72 142.24 180)
+		(at 38.1 147.32 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4854,7 +5082,7 @@
 		(uuid "c7901aa6-7b30-4829-88b7-1ada816a2836")
 	)
 	(label "latch"
-		(at 38.1 148.59 90)
+		(at 30.48 153.67 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4864,7 +5092,7 @@
 		(uuid "d23e87b3-9d13-42ea-9037-018ddb38fd49")
 	)
 	(label "+3V3"
-		(at 58.42 152.4 0)
+		(at 50.8 157.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6716,6 +6944,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_DPST_x2")
+		(at 45.72 137.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92b710fa-308d-406d-8ea0-858f7903e98e")
+		(property "Reference" "SW1"
+			(at 45.72 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_DPST_x2"
+			(at 45.72 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Single Pole Single Throw (SPST) switch, separate symbol"
+			(at 45.72 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "d19ea732-3800-4871-a858-601bf192df3a")
+		)
+		(pin "1"
+			(uuid "a4ed3f4f-88bd-4e91-bdb5-eec9647ad365")
+		)
+		(pin "2"
+			(uuid "ca46ef6d-b423-46e7-9d77-060188045f12")
+		)
+		(pin "3"
+			(uuid "a15c24a1-1c37-40f4-a145-b3dc191dfd2f")
+		)
+		(instances
+			(project "breakout"
+				(path "/e7acdc49-5583-42b4-8c0e-d4aaccb46e47"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 110.49 76.2 180)
 		(unit 1)
@@ -8080,7 +8394,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x05_Odd_Even")
-		(at 53.34 147.32 180)
+		(at 45.72 152.4 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8090,7 +8404,7 @@
 		(dnp no)
 		(uuid "f11d4be2-934e-47c3-9a4e-aa5f79647b9e")
 		(property "Reference" "J1"
-			(at 52.07 135.89 0)
+			(at 44.45 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8100,7 +8414,7 @@
 			)
 		)
 		(property "Value" "Conn_02x05_Odd_Even"
-			(at 52.07 138.43 0)
+			(at 44.45 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8110,7 +8424,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 53.34 147.32 0)
+			(at 45.72 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8121,7 +8435,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 147.32 0)
+			(at 45.72 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8132,7 +8446,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 53.34 147.32 0)
+			(at 45.72 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
